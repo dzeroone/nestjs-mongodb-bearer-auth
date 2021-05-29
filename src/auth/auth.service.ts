@@ -14,9 +14,6 @@ export class AuthService {
   ) {}
 
   async signup(body: SignupDto) {
-    const userObj = await this.userService.findOneByEmail(body.email)
-    if(userObj) throw new BadRequestException()
-
     body.password = await bcrypt.hash(body.password, 10)
     const newUserObj = await this.userService.create(body);
     const newTokenObj = await this.tokenService.create({

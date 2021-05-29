@@ -11,7 +11,6 @@ export class AuthController {
   async signup(
     @Body() body: SignupDto
   ) {
-    console.log('sdfsdf')
     return this.authService.signup(body)
   }
 
