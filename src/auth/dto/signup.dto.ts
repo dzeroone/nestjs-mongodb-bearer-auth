@@ -1,5 +1,5 @@
 import { IsEmail, IsNotEmpty, Validate } from "class-validator"
-import { EmailNotExistsRule } from "src/validators"
+import { EmailNotExistsRule } from "src/validators/email-not-exists-rule.validator"
 
 export class SignupDto {
   @IsEmail()

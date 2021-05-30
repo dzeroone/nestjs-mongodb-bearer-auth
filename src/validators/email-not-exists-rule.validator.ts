@@ -21,6 +21,6 @@ export class EmailNotExistsRule implements ValidatorConstraintInterface {
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `Email already exist`;
+    return `${args.property} already exist`;
   }
 }
